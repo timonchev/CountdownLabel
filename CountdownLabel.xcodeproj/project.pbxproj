@@ -64,9 +64,9 @@
 		892106D01C3CF4140007CDEC /* CountdownLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CountdownLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		892106D31C3CF4140007CDEC /* CountdownLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountdownLabel.h; sourceTree = "<group>"; };
 		892106D51C3CF4140007CDEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		892106FF1C3CF4490007CDEC /* CountdownLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownLabel.swift; sourceTree = "<group>"; };
+		892106FF1C3CF4490007CDEC /* CountdownLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = CountdownLabel.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8999B51B1C4F2F7200C46F10 /* CountdownLabelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountdownLabelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8999B51D1C4F2F7200C46F10 /* CountdownLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownLabelTests.swift; sourceTree = "<group>"; };
+		8999B51D1C4F2F7200C46F10 /* CountdownLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = CountdownLabelTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8999B51F1C4F2F7200C46F10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8999B5261C4F2F8700C46F10 /* StoryboardTests.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StoryboardTests.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
