@@ -60,6 +60,10 @@ public class CountdownLabel: LTMorphingLabel {
         return finished
     }
     
+    public var endTime: Date {
+        return self.fromDate.addingTimeInterval(targetTime)
+    }
+    
     public weak var countdownDelegate: CountdownLabelDelegate?
     
     // user settings
