@@ -13,16 +13,17 @@ import UIKit
     @objc optional func countdownPaused()
     @objc optional func countdownFinished()
     @objc optional func countdownCancelled()
-    @objc optional func countingAt(timeCounted timeCounted: TimeInterval, timeRemaining: TimeInterval)
+    @objc optional func countingAt(timeCounted: TimeInterval, timeRemaining: TimeInterval)
 
 }
-extension TimeInterval {
+
+public extension TimeInterval {
     var int: Int {
         return Int(self)
     }
 }
 
-class CountdownLabel: LTMorphingLabel {
+public class CountdownLabel: LTMorphingLabel {
     
     public typealias CountdownCompletion = () -> ()?
     public typealias CountdownExecution = () -> ()
@@ -339,7 +340,7 @@ extension CountdownLabel {
     }
 }
 
-enum CountdownEffect {
+public enum CountdownEffect {
     case Anvil
     case Burn
     case Evaporate
@@ -363,7 +364,7 @@ enum CountdownEffect {
     }
 }
 
-class CountdownAttributedText: NSObject {
+public class CountdownAttributedText: NSObject {
     internal let text: String
     internal let replacement: String
     internal let attributes: [String: AnyObject]?
