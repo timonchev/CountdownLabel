@@ -191,8 +191,8 @@ public class CountdownLabel: LTMorphingLabel {
 }
 
 // MARK: - Public
-extension CountdownLabel {
-    func start(completion: ( () -> () )? = nil) {
+public extension CountdownLabel {
+    public func start(completion: ( () -> () )? = nil) {
         if !isPaused {
             // current date should be setted at the time of the counter's starting, or the time will be wrong (just a few seconds) after the first time of pausing.
             currentDate = Date()
@@ -214,7 +214,7 @@ extension CountdownLabel {
         countdownDelegate?.countdownStarted?()
     }
     
-    func pause(completion: (() -> ())? = nil) {
+    public func pause(completion: (() -> ())? = nil) {
         if paused {
             return
         }
@@ -236,7 +236,7 @@ extension CountdownLabel {
         countdownDelegate?.countdownPaused?()
     }
     
-    func cancel(completion: (() -> ())? = nil) {
+    public func cancel(completion: (() -> ())? = nil) {
         text = dateFormatter.string(from: date1970.addingTimeInterval(0) as Date)
         dispose()
         
@@ -247,14 +247,14 @@ extension CountdownLabel {
         countdownDelegate?.countdownCancelled?()
     }
     
-    func addTime(time: TimeInterval) {
+    public func addTime(time: TimeInterval) {
         currentTime = time + currentTime
         diffDate = date1970.addingTimeInterval(currentTime)
         
         updateLabel()
     }
     
-    func then(targetTime: TimeInterval, completion: @escaping () -> ()) -> Self {
+    public func then(targetTime: TimeInterval, completion: @escaping () -> ()) -> Self {
         let t = targetTime - (targetTime - targetTime)
         guard t > 0 else {
             return self
