@@ -51,8 +51,8 @@ extension LTMorphingLabel {
                 height: maskedHeight
             )
             String(charLimbo.char).draw(in: rect, withAttributes: [
-                NSFontAttributeName: self.font,
-                NSForegroundColorAttributeName: self.textColor
+                NSAttributedStringKey.font: self.font,
+                NSAttributedStringKey.foregroundColor: self.textColor
                 ])
             let newImage = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
@@ -69,7 +69,7 @@ extension LTMorphingLabel {
         
         startClosures["Sparkle\(LTMorphingPhases.Start)"] = {
             self.emitterView.removeAllEmitters()
-        }
+        } as LTMorphingStartClosure
         
         progressClosures["Sparkle\(LTMorphingPhases.Progress)"] = {
             (index: Int, progress: Float, isNewChar: Bool) in
@@ -120,7 +120,7 @@ extension LTMorphingLabel {
                             height: 1
                         )
                         layer.renderMode = kCAEmitterLayerOutline
-                        cell.emissionLongitude = CGFloat(M_PI / 2.0)
+                        cell.emissionLongitude = CGFloat(Double.pi / 2.0)
                         cell.scale = self.font.pointSize / 300.0
                         cell.scaleSpeed = self.font.pointSize / 300.0 * -1.5
                         cell.color = self.textColor.cgColor
@@ -161,7 +161,7 @@ extension LTMorphingLabel {
         
         skipFramesClosures["Sparkle\(LTMorphingPhases.SkipFrames)"] = {
             return 1
-        }
+        } as LTMorphingSkipFramesClosure
     }
     
 }

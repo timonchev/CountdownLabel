@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
   s.name         = "CountdownLabel"
-  s.version      = '2.0.1'
+  s.version      = '3.0.0'
   s.summary      = 'Simple countdown UILabel with morphing animation, and some useful function.'
-  s.homepage     = "https://github.com/suzuki-0000/CountdownLabel"
+  s.homepage     = "https://github.com/choulex99/CountdownLabel"
   s.license      = { :type => "MIT", :file => "LICENSE" }
-  s.author       = { "suzuki_keishi" => "keishi.1983@gmail.com" }
-  s.source       = { :git => "https://github.com/suzuki-0000/CountdownLabel.git", :tag => s.version }
-  s.platform     = :ios, "9.0"
+  s.author       = { "choulex99" => "claude.houle@gmail.com" }
+  s.source       = { :git => "git@github.com:choule99/CountdownLabel.git", :tag => s.version }
+  s.platform     = :ios, "10.0"
   s.source_files = 'CountdownLabel/*.swift'
   s.source_files = 'CountdownLabel/**/*.swift'
   s.requires_arc = true
