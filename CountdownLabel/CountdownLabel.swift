@@ -61,7 +61,7 @@ public class CountdownLabel: LTMorphingLabel {
     }
     
     public var endTime: Date {
-        return self.fromDate.addingTimeInterval(targetTime)
+        return self.fromDate.addingTimeInterval(currentTime)
     }
     
     public weak var countdownDelegate: CountdownLabelDelegate?
@@ -90,7 +90,6 @@ public class CountdownLabel: LTMorphingLabel {
     internal var currentDate: Date = Date()
     internal var currentTime: TimeInterval = 0
     internal var diffDate: Date!
-    internal var targetTime: TimeInterval = 0
     internal var pausedDate: Date!
     internal var range: NSRange!
     internal var timer: Timer!
@@ -147,7 +146,6 @@ public class CountdownLabel: LTMorphingLabel {
     public func setCountDownTime(fromDate: Date, minutes: TimeInterval) {
         self.fromDate = fromDate
         
-        targetTime = minutes
         currentTime = minutes
         diffDate = date1970.addingTimeInterval(minutes)
         
@@ -161,7 +159,7 @@ public class CountdownLabel: LTMorphingLabel {
     public func setCountDownDate(fromDate: Date, targetDate: Date) {
         self.fromDate = fromDate
         
-        targetTime = targetDate.timeIntervalSince(fromDate as Date)
+        let targetTime = targetDate.timeIntervalSince(fromDate as Date)
         currentTime = targetDate.timeIntervalSince(fromDate as Date) 
         diffDate = date1970.addingTimeInterval(targetTime)
         
