@@ -167,7 +167,7 @@ public class CountdownLabel: LTMorphingLabel {
     }
     
     // MARK: - Update
-    func updateLabel() {
+    @objc func updateLabel() {
         // delegate
         countdownDelegate?.countingAt?(timeCounted: timeCounted, timeRemaining: timeRemaining)
         
@@ -369,9 +369,9 @@ public enum CountdownEffect {
 public class CountdownAttributedText: NSObject {
     internal let text: String
     internal let replacement: String
-    internal let attributes: [String: AnyObject]?
+    internal let attributes: [NSAttributedStringKey: AnyObject]?
    
-    public init(text: String, replacement: String, attributes: [String: AnyObject]? = nil) {
+    public init(text: String, replacement: String, attributes: [NSAttributedStringKey: AnyObject]? = nil) {
         self.text = text
         self.replacement = replacement
         self.attributes = attributes

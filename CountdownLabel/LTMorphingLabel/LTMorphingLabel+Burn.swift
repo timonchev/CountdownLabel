@@ -51,8 +51,8 @@ extension LTMorphingLabel {
                 height: maskedHeight
             )
             String(charLimbo.char).draw(in: rect, withAttributes: [
-                NSFontAttributeName: self.font,
-                NSForegroundColorAttributeName: self.textColor
+                NSAttributedStringKey.font: self.font,
+                NSAttributedStringKey.foregroundColor: self.textColor
                 ])
             let newImage = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
@@ -69,7 +69,7 @@ extension LTMorphingLabel {
         
         startClosures["Burn\(LTMorphingPhases.Start)"] = {
             self.emitterView.removeAllEmitters()
-        }
+        } as LTMorphingStartClosure
         
         progressClosures["Burn\(LTMorphingPhases.Progress)"] = {
             index, progress, isNewChar in
@@ -194,7 +194,7 @@ extension LTMorphingLabel {
         
         skipFramesClosures["Burn\(LTMorphingPhases.SkipFrames)"] = {
             return 1
-        }
+        } as LTMorphingSkipFramesClosure
     }
     
 }
