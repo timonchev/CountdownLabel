@@ -37,16 +37,16 @@ public extension String {
         
         guard let anotherString = anotherString else {
             let diffResults: [LTCharacterDiffResult] =
-                Array(repeating: .Delete, count: characters.count)
-            let skipDrawingResults: [Bool] = Array(repeating: false, count: characters.count)
+                Array(repeating: .Delete, count: count)
+            let skipDrawingResults: [Bool] = Array(repeating: false, count: count)
             return (diffResults, skipDrawingResults)
         }
         
-        let newChars = anotherString.characters.enumerated()
-        let lhsLength = characters.count
-        let rhsLength = anotherString.characters.count
+        let newChars = anotherString.enumerated()
+        let lhsLength = count
+        let rhsLength = anotherString.count
         var skipIndexes = [Int]()
-        let leftChars = Array(characters)
+        let leftChars = Array(self)
         
         let maxLength = max(lhsLength, rhsLength)
         var diffResults: [LTCharacterDiffResult] = Array(repeating: .Add, count: maxLength)
