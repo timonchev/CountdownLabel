@@ -5,8 +5,8 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/choulex99/CountdownLabel"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "choulex99" => "claude.houle@gmail.com" }
-  s.source       = { :git => "git@github.com:choule99/CountdownLabel.git", :tag => s.version }
-  s.platform     = :ios, "10.0"
+  s.source       = { :git => "https://github.com/timonchev/CountdownLabel.git", :tag => s.version }
+  s.platform     = :ios, "9.0"
   s.source_files = 'CountdownLabel/*.swift'
   s.source_files = 'CountdownLabel/**/*.swift'
   s.requires_arc = true
